@@ -1,0 +1,115 @@
+    /* Estilo para o Botão do Chat */
+    #chat-button {
+        background-color: #5423db; /* Cor de fundo do botão (azul quase roxo) */
+        color: #fff; /* Cor do texto do botão (branco) */
+        font-size: 20px;
+        border: none;
+        border-radius: 50%; /* Formato circular */
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+
+    #chat-button:hover {
+        background-color: #5423db; /* Cor do botão ao passar o mouse (tom mais claro de azul quase roxo) */
+    }
+
+    #chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 320px;
+        background-color: #f4f4f4; /* Alterada a cor de fundo */
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+    
+    #chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border-top-left-radius: 10px; /* Adicionado um arredondamento de canto */
+        border-top-right-radius: 10px; /* Adicionado um arredondamento de canto */
+    }
+    
+    #close-button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    #close-button:hover {
+        color: #f4f4f4; /* Alterada a cor ao passar o mouse */
+    }
+    
+    #chat-container {
+        height: 260px;
+        overflow-y: auto;
+        padding: 15px;
+    }
+    
+    .message {
+        margin-bottom: 10px;
+    }
+    
+    #message-input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-top: 1px solid #ccc;
+        font-size: 14px;
+    }
+    
+    #send-button {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #send-button:hover {
+        background-color: #0056b3;
+    }
+    
+
+    /* Estilo para o Navbar */
+    .navbar {
+        background-color: rgba(70, 66, 66, 0.7); /* Cor de fundo com opacidade */
+        border-bottom: 3px solid #5423db; /* Cor da borda inferior (azul quase roxo) */
+        font-weight: bold; /* Tornar o texto em negrito */
+    }
+
+    .navbar-brand {
+        color: #ffffff; /* Cor do texto da marca (azul quase roxo) */
+        font-weight: bold;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #5423db; /* Cor do ícone do toggler (azul quase roxo) */
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff; /* Cor dos links (branco) */
+        margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #000000; /* Cor dos links ao passar o mouse (azul quase roxo) */
+    }
+
