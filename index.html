@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8" />
@@ -24,15 +24,15 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#finance">Fianceiro</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sfdc">Salesforce</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#finance">Financeiro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sfdc.html">Salesforce</a></li>
                     <li class="nav-item"><a class="nav-link" href="#training">Treinamentos</a></li>
                 </ul>
             </div>
-    
+
             <!-- Botão do Chat -->
             <button id="chat-button">🗨️</button>
-    
+
             <!-- Chat Popup -->
             <div id="chat-popup">
                 <div id="chat-header">
@@ -43,7 +43,7 @@
                 <input type="text" id="message-input" placeholder="Digite sua mensagem...">
                 <button id="send-button">Enviar</button>
             </div>
-    
+
         </div>
     </nav>
 
@@ -56,7 +56,7 @@
             <div class="col-md-10 mx-auto col-lg-5">
                 <div class="row g-3">
                     <div class="col-sm-12">
-                        <div class="card shadow-lg rounded bg-light">
+                        <div class="card shadow-lg rounded bg-nude">
                             <div class="card-body">
                                 <h5 class="card-title">Otimize uma campanha</h5>
                                 <p class="card-text">Elabore um e-mail para o seu cliente, destacando a otimização de
@@ -68,18 +68,17 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <div class="card shadow-lg rounded bg-light">
+                        <div class="card shadow-lg rounded bg-nude">
                             <div class="card-body">
                                 <h5 class="card-title">Controle a entrega</h5>
                                 <p class="card-text">texto
                                 </p>
-                                <button id="dark-mode-toggle" class="btn btn-primary w-100 rounded">Alternar
-                                    Modo</button>
+                                <button id="dark-mode-toggle" class="btn btn-primary w-100 rounded">texto</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <div class="card shadow-lg rounded bg-light">
+                        <div class="card shadow-lg rounded bg-nude">
                             <div class="card-body">
                                 <h5 class="card-title">Pacing 1:Many</h5>
                                 <p class="card-text">texto.
@@ -151,7 +150,7 @@
                                         </div>
                                     </div>
                                     <div class="vstack gap-3" id="hidden_div_audience" style="display:none;">
-                                        <div class="card col-sm-12 text-bg-light">
+                                        <div class="card col-sm-12">
                                             <div class="card-body">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="cUser"
@@ -223,7 +222,7 @@
                                         </div>
                                     </div>
                                     <div class="vstack gap-3" id="hidden_div_creative" style="display:none;">
-                                        <div class="card col-sm-12 text-bg-light">
+                                        <div class="card col-sm-12">
                                             <div class="card-body">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="cta"
@@ -233,14 +232,42 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="hashUrl"
                                                         id="hash_url">
-                                                    <label class="form-check-label" for="flexCheckDefault">Hastags e
-                                                        URL</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Hastags e URL</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="aBtest"
                                                         id="abtest">
-                                                    <label class="form-check-label" for="flexCheckDefault">Teste
-                                                        A/B</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Teste A/B</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="plusAd"
+                                                        id="plus_Ad">
+                                                    <label class="form-check-label" for="flexCheckDefault">Inclua mais criativos</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="captionText"
+                                                        id="caption_Text">
+                                                    <label class="form-check-label" for="flexCheckDefault">Legenda</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="adQuality"
+                                                        id="ad_Quality">
+                                                    <label class="form-check-label" for="flexCheckDefault">Qualidade do Criativo</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="brand"
+                                                        id="brand">
+                                                    <label class="form-check-label" for="flexCheckDefault">Identidade Visual/Logo</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="coherence"
+                                                        id="coherence">
+                                                    <label class="form-check-label" for="flexCheckDefault">Coerência</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="oldCreative"
+                                                        id="old_creative">
+                                                    <label class="form-check-label" for="flexCheckDefault">Renove criativos</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -260,47 +287,43 @@
                                         </div>
                                     </div>
                                     <div class="vstack gap-3" id="hidden_div_product" style="display:none;">
-                                        <div class="card col-sm-12 text-bg-light">
+                                        <div class="card col-sm-12">
                                             <div class="card-body">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="single_image">
-                                                    <label class="form-check-label" for="inlineCheckbox1">Single
-                                                        Image</label>
+                                                    <input class="form-check-input" type="checkbox" id="single_image" value="singImgAd">
+                                                    <label class="form-check-label" for="inlineCheckbox1">Single Image</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="carroussel">
-                                                    <label class="form-check-label"
-                                                        for="inlineCheckbox2">Carrossel</label>
+                                                    <input class="form-check-input" type="checkbox" id="carroussel" value="crssel">
+                                                    <label class="form-check-label" for="inlineCheckbox2">Carrossel</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="dyn_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox3">Dynamic
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="dyn_ads" value="dynAd">
+                                                    <label class="form-check-label" for="inlineCheckbox3">Dynamic Ads</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="doc_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox4">Document
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="doc_ads" value="docAd">
+                                                    <label class="form-check-label" for="inlineCheckbox4">Document Ads</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="text_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox5">Text
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="text_ads" value="txtAd">
+                                                    <label class="form-check-label" for="inlineCheckbox5">Text Ads</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="conv_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox6">Conversation
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="conv_ads" value="cvAd">
+                                                    <label class="form-check-label" for="inlineCheckbox6">Conversation Ads</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="vid_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox7">Video
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="vid_ads" value="vidAd">
+                                                    <label class="form-check-label" for="inlineCheckbox7">Video Ads</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="event_ads">
-                                                    <label class="form-check-label" for="inlineCheckbox8">Event
-                                                        Ads</label>
+                                                    <input class="form-check-input" type="checkbox" id="event_ads" value="evAd">
+                                                    <label class="form-check-label" for="inlineCheckbox8">Event Ads</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="leader_ads" value="tlad">
+                                                    <label class="form-check-label" for="inlineCheckbox8">Thought Leader Ads</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -320,7 +343,7 @@
                                         </div>
                                     </div>
                                     <div class="vstack gap-3" id="hidden_div_narrative" style="display:none;">
-                                        <div class="card col-sm-12 text-bg-light">
+                                        <div class="card col-sm-12">
                                             <div class="card-body">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value=""
@@ -359,7 +382,7 @@
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label">Aqui está a
                                                 sugestão para otimização</label>
-                                            <textarea class="form-control" id="optimized_text" rows="10"></textarea>
+                                            <textarea class="form-control" id="optimized_text" rows="22"></textarea>
                                         </div>
                                     </div>
                                 </div>
