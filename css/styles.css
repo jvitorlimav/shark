@@ -10861,7 +10861,7 @@ section {
 }
 
 body {
-  background-image: url('../assets/bgImage.jpg');
+  background-image: url('../assets/bgImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -10895,4 +10895,26 @@ body {
 
 .f-right {
   float: right;
+}
+
+input[disabled] {
+  background-color: transparent !important;
+  opacity: 1;
+  cursor: default;
+}
+
+.background-image-class {
+  /* Define a URL da imagem de fundo */
+  background-image: url('../assets/bgImage3.jpg');
+
+  /* Define o tamanho do background (opcional) */
+  background-size: cover;
+
+  /* Define a posição do background (opcional) */
+  background-position: center;
+
+  /* Adiciona outras propriedades de background, se necessário */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* ... */
 }

@@ -13,131 +13,211 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/chatbotStyle.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="page-top" class="background-image-class">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">SHARK</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <nav class="navbar navbar-expand-lg fixed-bottom" opacity: 0.2>
+            <div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">Fianceiro</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Salesforce</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Treinamentos</a></li>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <!--i class="nav-item"><a class="nav-link" href="#finance">Financeiro</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="faqSFDC.html">Guia SFDC</a></li>
                     </ul>
-                </div>
+                </div>    
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-primary bg-gradient text-white">
-            <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Welcome to SHARK</h1>
-                <p class="lead">Smart Hub for Advertising, Reporting and Key Insights</p>
-                <a class="btn btn-lg btn-light" href="#about">Start SmartIn!</a>
-            </div>
-        </header>
+        <!-- <header class="bg-primary text-white">
+            
+        </header> -->
         <!-- Choice section -->
-        <section id="about">
-            <div class="container px-4">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        Como Criar um Ticket
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <strong>Antes de saber como, é importante saber o porquê abrir um ticket.</strong> Normalmente, abrimos um case quando precisamos de auxílio de um outro time em uma conta. Nós veremos as situações mais comuns no tópico 2. 
-                            Sabendo disso, existem três maneiras de criar um ticket no Salesforce (SFDC), sendo elas:
-                            <!-- opções -->
-                            <p class="d-inline-flex gap-1">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#T1" aria-expanded="false" aria-controls="collapseExample">
-                                    Por meio da oportunidade
-                                </button>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#T2" aria-expanded="false" aria-controls="collapseExample">
-                                    Pesquisando "cases"
-                                </button>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#T3" aria-expanded="false" aria-controls="collapseExample">
-                                    Na barra lateral da conta
-                                </button>
-                            </p>
-
-                            <!-- Retorno1 -->
-                            <div class="collapse" id="T1">
-                                <div class="card card-body">
-                                    
-                                    <h5 class="card-title">Por meio da oportunidade</h5>
-                                    <ol>
-                                        <li>Na oportunidade, clique em “Details”</li>
-                                        <li>Clique no ícone do Einstein</li>
-                                        <li>Selecione o tipo de registro</li>
-                                        <li>Preencha as informações do ticket (ver tópico 2)</li>
-                                    </ol>
-                                    <img src="..." class="rounded float-end" alt="...">
+        <section id="about" class="">
+            <div class="container px-4 ">
+                <div class="col-md-10 mx-auto col-lg-8">
+                    <div class="container px-4 text-center">
+                        <h1 class="fw-bolder">Guia Salesforce</h1>
+                        <p class="lead">Aqui você encontra as dúvidas mais frequentes do dia a dia</p>
+                    </div>
+                </br>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Como criar um ticket?
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Antes de saber como, é importante saber o porquê abrir um ticket. </strong>Normalmente, abrimos um case quando precisamos de auxílio de um outro time em uma conta. Nós veremos as situações mais comuns no tópico 2. 
+                              Sabendo disso, existem três maneiras de criar um ticket no Salesforce (SFDC), sendo elas: 
+                              
+                              <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      Por meio da oportunidade
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">1. Na oportunidade, clique em “Details” </br>
+                                      2. Clique no ícone do Einstein </br>
+                                      3. Selecione o tipo de registro </br>
+                                      4. Preencha as informações do ticket (ver tópico 2)
+                                      </div>
+                                  </div>
                                 </div>
-                            </div>
-                            <!-- Retorno2 -->
-                            <div class="collapse" id="T2">
-                                <div class="card card-body">
-                                    teste 2
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      Pesquisando “cases”
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">1. Clique no icone do App Launcher no SFDC </br>
+                                      2. Pesquise “Cases” </br>
+                                      3. Clique em “New” </br>
+                                      4. Selecione o tipo de registro </br>
+                                      5. Preencha as informações do ticket (ver tópico 2) </br>
+                                      </div>
+                                  </div>
                                 </div>
-                            </div>
-                            <!-- Retorno3 -->
-                            <div class="collapse" id="T3">
-                                <div class="card card-body">
-                                    teste 3
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                      Na barra lateral esquerda da conta 
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">1. Deslize a barra lateral esquerda para baixo </br>
+                                      2. Clique na seta ao lado de “Cases” </br>
+                                      3. Clique em “New” </br>
+                                      4. Selecione o tipo de registro </br>
+                                      5. Preencha as informações do ticket (ver tópico 2)
+                                      </div>
+                                  </div>
                                 </div>
+                              </div>
+                            </div>                        
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Credit Check
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Responsabilidade:</strong> Solicitações relacionadas a Crédito - verificações de crédito (todos os produtos, clientes novos/existentes), aprovações do DSM, solicitação de termos fora do padrão, solicitação de remoção de retenção de crédito. Solicitação de alteração de nome SFDC e solicitações de referência comercial.
+                            
+                              <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      Verificação de crédito manual
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Quando a análise de crédito demora a ser feita, você pode solicitar manualmente para que o time veja a situação, sendo importante deixar claro para o time de checagem de crédito o tamanho da oportunidade. Abaixo você encontra um template: </br></br>
+                                      <i>“Hi team,</br></br>
+                                      
+                                      Hope this finds you well</br></br>
+                                      
+                                      This opp's credit check is in progress for a while. Could you please check? This is a [insert here client amount in Brazillian reais] BRL client - [insert revenue in US Dollars] USD</i>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      Verificação de crédito automática
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Quando o próprio Salesforce cria um ticket de verificação de crédito após a análise ser negativa, por exemplo: crédito insuficiente para liberação da IO. Nesse caso você deve ir até o caso criado por meio da aba de “cases” da conta e comentar em “chatter” algo que ajude o crédito ser aprovado, como um aporte recente feito na empresa.</br>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
                             </div>
-
+                          </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Deal Desk
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Responsabilidade:</strong> Solicitações relacionadas a pedidos de inserção, cotações, segmentação, ratecard, preços/descontos e quaisquer dúvidas adicionais relacionadas ao processo de pré-venda.
+                            
+                              <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      Mudar o dono da oportunidade de pessoa para POD (Insufficient Rights)
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Antes de qualquer coisa, verifique se você está mapeado corretamente na conta no SFDC. O Book e todos os membros do POD também deverão estar mapeados. </br></br>
+    
+                                      Quando a oportunidade estiver em seu nome invés do Book do POD como aparece abaixo, isso é um problema, porque você não conseguirá enviar o contrato como ela está ligada a você e não ao time.</br></br>
+                                      
+                                      Por vezes o sync pode ser automático, apenas é necessário atualizar a página até aparecer o nome do time. Em alguns casos, pode demorar até 2 horas para o sistema completar o sync. Não altere o “opportunity owner” manualmente uma vez que isso impede que o sync seja processado de forma automática.</br></br>
+                                      
+                                      Para saber se o sync foi completado com sucesso, os nomes do POD devem aparecer  no campo “Opportunity Team” (localizada na parte inferior da oportunidade) com acesso “Read/Write”. </br></br>
+                                      
+                                      
+                                      Se <strong>após 2 horas</strong> não for completado o sync, ou o seu “Opportunity Access” está como “Read Only”, abra um ticket para LMS Deal Desk pedindo para atualizar a oportunidade com o Book ou para alterar o seu acesso para “Read/Write”. </br></br>
+                                      
+                                      Abaixo você encontra um template:</br></br>
+    
+                                      <i>“Hi team,</br>
+                                      Hope this finds you well!</br>
+                                      We're not being able to edit this IO due to insufficient rights (Book BR NB 2). Could you please help us?</br>
+                                      
+                                      Thanks,”</i>
+                                      
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      Atualizar agência
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Quando for necessário atualizar uma agência numa conta, seja porque mudou a agência ou que passou a ter uma agência numa conta que era canal direto, é preciso pedir para que isso seja feito pelo time de Deal Desk. Abaixo você encontra um template: </br>
+                                      <i>“Hi team,</br>
+                                      Hope this finds you well</br>
+                                      
+                                      Could you please update this opp by adding the following agency in the Sales channel? </br></br>
+                                      
+                                      
+                                      SFDC Agency Name: (insira o nome da agência) </br>
+                                      SFDC Agency link: (Insira o Link para a conta no Salesforce)</br></br>
+                                      
+                                      Thanks”</i>
+                                      </br>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                        Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                    </div>
+                      </div>
                 </div>
-            </div>
         </section>
 
-
-        <button id="chat-button">🗨️</button>
-
-        <div id="chat-popup">
-            <div id="chat-header">
-                <span>Chatbot</span>
-                <button id="close-button">X</button>
-            </div>
-            <div id="chat-container"></div>
-            <input type="text" id="message-input" placeholder="Digite sua mensagem...">
-            <button id="send-button">Enviar</button>
-        </div>
-
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
-        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
