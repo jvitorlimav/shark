@@ -23,10 +23,10 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="engIndex.html">Home</a></li>
                     <!--i class="nav-item"><a class="nav-link" href="#finance">Financeiro</a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="faqSFDC.html">Guia SFDC</a></li>
-                    <li class="nav-item ms-auto"><a class="nav-link" href="engIndex.html">English version</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqSFDC.html">SFDC Guide</a></li>
+                    <li class="nav-item ms-auto"><a class="nav-link" href="index.html">PT version</a></li>
                 </ul>
             </div>
 
@@ -47,8 +47,6 @@
         </div>
     </nav>
 
-
-
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
@@ -60,12 +58,11 @@
                     <div class="col-sm-12">
                         <div class="card shadow-lg rounded bg-nude">
                             <div class="card-body">
-                                <h5 class="card-title">Otimize uma campanha</h5>
-                                <p class="card-text">Elabore um e-mail para o seu cliente, destacando a otimização de
-                                    uma
-                                    campanha com um formato flexível.</p>
+                                <h5 class="card-title">Optimize a Campaign</h5>
+                                <p class="card-text">Create an email for your client, highlighting the optimization of a
+                                    campaign with a flexible format.</p>
                                 <button type="button" class="btn btn-primary w-100 rounded" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">Comece a otimizar</button>
+                                    data-bs-target="#exampleModal">Start optimizing</button>
                             </div>
                         </div>
                     </div>
@@ -73,29 +70,19 @@
                     <div class="col-sm-12">
                         <div class="card shadow-lg rounded bg-nude">
                             <div class="card-body">
-                                <h5 class="card-title">Otimização por planilha</h5>
-                                <p class="card-text">Faça o upload de uma planilha e o Shark irá personalizar um texto
-                                    de
-                                    otimização de campanhas</p>
+                                <h5 class="card-title">Optimization through Spreadsheet</h5>
+                                <p class="card-text">Upload a spreadsheet, and Shark will customize a campaign
+                                    optimization text.</p>
                                 <button type="button" class="btn btn-primary w-100 rounded" data-bs-toggle="modal"
-                                    data-bs-target="#modalplan">Começar</button>
+                                    data-bs-target="#modalplan">Get Started</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- <div class="col-sm-12">
-                        <div class="card shadow-lg rounded bg-nude">
-                            <div class="card-body">
-                                <h5 class="card-title">Controle a entrega</h5>
-                                <p class="card-text">texto
-                                </p>
-                                <button id="dark-mode-toggle" class="btn btn-primary w-100 rounded">Calculo de
-                                    Pacing</button>
-                            </div>
-                        </div>
-                    </div> -->
+                    <!-- Additional card content can be added here -->
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -119,38 +106,39 @@
                                             <div class="col-md-6">
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="client_name">
-                                                    <label for="floatingInput1">Nome do Cliente</label>
+                                                    <label for="floatingInput1">Client's Name</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="campaing_name">
-                                                    <label for="floatingInput2">Nome da Campanha</label>
+                                                    <label for="floatingInput2">Campaign Name</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
-                                        <!-- Objetivo da campanha -->
+                                        <!-- Campaign Objective -->
                                         <div class="form-floating col-md-12">
                                             <select class="form-select" id="escObjetivo"
                                                 aria-label="Floating label select example">
-                                                <option value="awareness">Conhecimento da marca</option>
-                                                <option value="webVisit">Visitas ao site</option>
-                                                <option value="engagement">Engajamento</option>
-                                                <option value="videoView">Visualizações de vídeo</option>
-                                                <option value="leadGen">Geração de leads</option>
-                                                <option value="webConv">Conversão no site</option>
+                                                <option value="awareness">Brand Awareness</option>
+                                                <option value="webVisit">Website Visits</option>
+                                                <option value="engagement">Engagement</option>
+                                                <option value="videoView">Video Views</option>
+                                                <option value="leadGen">Lead Generation</option>
+                                                <option value="webConv">Website Conversions</option>
                                             </select>
-                                            <label for="CampaingObjective">Objetivo da campanha</label>
+                                            <label for="CampaingObjective">Campaign Objective</label>
                                         </div>
                                     </div>
+
                                 </div>
                                 <br>
                                 <!-- Sugestão de público -->
                                 <div class="card col-sm-12">
                                     <div class="card-body">
                                         <div class="hstack">
-                                            <h5 class="card-title me-auto">Sugestão de público?</h5>
+                                            <h5 class="card-title me-auto">Audience suggestion?</h5>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch"
                                                     id="flexSwitchCheckDefault" onclick="showDivPublico(this)">
@@ -163,40 +151,41 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="cUser"
                                                         id="comp_exp">
-                                                    <label class="form-check-label" for="flexCheckDefault">Competências
-                                                        do usuário + Nível de
-                                                        experiência </label>
+                                                    <label class="form-check-label" for="flexCheckDefault">User Skills +
+                                                        Experience Level</label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="audSiz"
                                                         id="audience_size">
-                                                    <label class="form-check-label" for="flexCheckDefault">Aumentar
-                                                        tamanho da audiência </label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Increase
+                                                        Audience Size</label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="indSiz"
                                                         id="ind_size">
-                                                    <label class="form-check-label" for="flexCheckDefault">Tamanho
-                                                        da empresa + Setor da empresa </label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Company Size
+                                                        + Industry</label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="influ"
                                                         id="influencers">
-                                                    <label class="form-check-label" for="flexCheckDefault">Decisores
-                                                        & influenciadores </label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Decision
+                                                        Makers & Influencers</label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                             </div>
                                         </div>
+                                        <br>
                                     </div>
                                 </div>
+
                                 <br>
                                 <!-- Criativos -->
                                 <!-- <div class="card col-md-12">
@@ -269,13 +258,13 @@
                                         </div>
                                         <br>
                                     </div>
-                                </div> 
-                                <br>-->
+                                </div>
+                                <br> -->
                                 <!-- Produtos -->
                                 <div class="card col-md-12">
                                     <div class="card-body">
                                         <div class="hstack">
-                                            <h5 class="card-title me-auto">Sugerir Produtos?</h5>
+                                            <h5 class="card-title me-auto">Suggest Products?</h5>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch"
                                                     id="flexSwitchCheckDefault" onclick="showDivProduct(this)">
@@ -295,7 +284,7 @@
                                                     <input class="form-check-input" type="checkbox" id="carroussel"
                                                         value="crssel">
                                                     <label class="form-check-label"
-                                                        for="inlineCheckbox2">Carrossel</label>
+                                                        for="inlineCheckbox2">Carousel</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" id="dyn_ads"
@@ -344,12 +333,13 @@
                                         <br>
                                     </div>
                                 </div>
-                                <br>
-                                <!-- Mais informações -->
+                                </br>
+
+                                <!--More Info-->
                                 <div class="card col-md-12">
                                     <div class="card-body">
                                         <div class="hstack">
-                                            <h5 class="card-title me-auto">Informações adicionais?</h5>
+                                            <h5 class="card-title me-auto">Additional Information?</h5>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch"
                                                     id="flexSwitchCheckDefault" onclick="showDivMore(this)">
@@ -374,62 +364,64 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="fullFunnel"
                                                         id="funil_completo">
-                                                    <label class="form-check-label" for="flexCheckDefault">Funil
-                                                        Completo</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Full
+                                                        Funnel</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="tempApre"
                                                         id="tempo_aprendizagem">
-                                                    <label class="form-check-label" for="flexCheckDefault">Tempo de
-                                                        aprendizagem</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Learning
+                                                        Time</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="crmLeads"
                                                         id="crm_leads">
-                                                    <label class="form-check-label" for="flexCheckDefault">Integração
-                                                        CRM + Formulário de leads</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">CRM
+                                                        Integration +
+                                                        Lead Form</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="offConve"
                                                         id="off_conversao">
-                                                    <label class="form-check-label" for="flexCheckDefault">Conversão
-                                                        Offline</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Offline
+                                                        Conversion</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
                                     </div>
                                 </div>
-                            </div>
+                        </form>
+                    </div>
 
-                            <div id="step-2" style="display: none;">
-                                <div class="card col-sm-12">
-                                    <div class="card-body">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label">Aqui está a
-                                                sugestão para otimização</label>
-                                            <textarea class="form-control" id="optimized_text" rows="22"></textarea>
-                                        </div>
-                                    </div>
+
+                    <div id="step-2" style="display: none;">
+                        <div class="card col-sm-12">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Here is the suggestion
+                                        for optimization</label>
+                                    <textarea class="form-control" id="optimized_text" rows="22"></textarea>
                                 </div>
                             </div>
-                        </form>
-                        <br>
-                    </div>
-                    <div class="modal-footer">
-
-                        <div id="appear_button" hidden>
-                            <button type="button" class="btn btn-primary" onclick="desfazer()">Voltar</button>
-                            <button type="button" class="btn btn-primary" onclick="copyOptimization()">Copiar</button>
                         </div>
-
-                        <button type="button" class="btn btn-primary" onclick="callSuperButton()" id="optimize_button"
-                            disabled>Ver segmentação</button>
-
                     </div>
+                    <br>
+                </div>
+                <div class="modal-footer">
+
+                    <div id="appear_button" hidden>
+                        <button type="button" class="btn btn-primary" onclick="desfazer()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="copyOptimization()">Copy</button>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="callSuperButton()" id="optimize_button"
+                        disabled>See Optimization</button>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Modal otimização por planilha-->
@@ -438,7 +430,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Otimize uma campanha</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Optimize a campaign</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -454,7 +446,7 @@
                                         </div>
                                         <div class="d-grid gap-2">
                                             <button type="button" class="btn btn-outline-primary btn-lg"
-                                                onclick="uploadFile()">Carregue um arquivo</button>
+                                                onclick="uploadFile()">Upload a file</button>
                                         </div>
                                     </div>
                                 </div>
@@ -462,19 +454,20 @@
 
                             <div id="step-4" style="display: none;">
                                 <div class="row">
-
                                     <div class="input-group input-group-lg mb-3">
+                                        <span class="input-group-text bg-transparent border-0 text-muted"
+                                            id="inputGroup-sizing-lg" style="font-size: 0.9em;">Campaign
+                                            Objective</span>
                                         <input type="text" class="form-control border-0 text-primary"
                                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
                                             id="autoCampaignObjective" style="font-size: 1.5em;" disabled>
                                     </div>
-
                                 </div>
                                 <table class="table">
                                     <thead>
                                         <tr class="table-dark">
                                             <th scope="col"></th>
-                                            <th scope="col">Média</th>
+                                            <th scope="col">Average</th>
                                             <th scope="col">Baseline</th>
                                         </tr>
                                     </thead>
@@ -488,17 +481,17 @@
                                             <th scope="row">CPM</th>
                                             <td id="avgCPM">-</td>
                                             <td><input id="baselineAvgCPM"></td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">CPC</th>
                                             <td id="avgCPC">-</td>
                                             <td><input id="baselineAvgCPC"></td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">Engagement Rate</th>
                                             <td id="avgEngRate">-</td>
                                             <td><input id="baselineAvgEngRate"></td>
-                                          </tr> -->
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -507,8 +500,8 @@
                                 <div class="card col-sm-12">
                                     <div class="card-body">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label">Aqui está a
-                                                sugestão para otimização</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label">Here is the
+                                                suggestion for optimization</label>
                                             <textarea class="form-control" id="optimized_text_sheet"
                                                 rows="22"></textarea>
                                         </div>
@@ -518,25 +511,26 @@
                         </form>
                         <br>
                     </div>
-                    <div class="modal-footer">
+                </div>
+                <div class="modal-footer">
 
-                        <!-- Segundo conjunto de botões - Escondido primeiro, visivel segundo, escondigo terceiro -->
-                        <div id="compareBaselineButtonSet">
-                            <button type="button" class="btn btn-primary" onclick="showStep3()">Voltar</button>
-                            <button type="button" class="btn btn-primary" onclick="comparaBaseline()">Seguinte</button>
-                        </div>
+                    <!-- Segundo conjunto de botões - Escondido primeiro, visivel segundo, escondigo terceiro -->
+                    <div id="compareBaselineButtonSet">
+                        <button type="button" class="btn btn-primary" onclick="showStep3()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="comparaBaseline()">Next</button>
+                    </div>
 
-                        <!-- Terceiro conjunto de botões - Escondido primeiro e segundo, visivel terceiro-->
-                        <div id="copyResultSet">
-                            <button type="button" class="btn btn-primary" onclick="showStep4()">Voltar</button>
-                            <button type="button" class="btn btn-primary" onclick="copyResult()">Copiar</button>
-                        </div>
+                    <!-- Terceiro conjunto de botões - Escondido primeiro e segundo, visivel terceiro-->
+                    <div id="copyResultSet">
+                        <button type="button" class="btn btn-primary" onclick="showStep4()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="copyResult()">Copy</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
+
 
     <!-- <button id="chat-button">🗨️</button>
             <div id="chat-popup">
@@ -558,9 +552,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/otimiza.js"></script>
+    <script src="js/engOptimize.js"></script>
     <!--<script src="js/chatbot.js"></script>-->
-    <script src="js/optimizePlan.js"></script>
+    <script src="js/engPlanOptimize.js"></script>
 
 </body>
 

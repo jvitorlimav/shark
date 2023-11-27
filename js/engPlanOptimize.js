@@ -79,7 +79,7 @@ function calculateAverage() {
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1, raw: false });
 
         let campaignObjective = jsonData[7][17]
-        document.getElementById("autoCampaignObjective").value = 'Campanha de ' + campaignObjective;
+        document.getElementById("autoCampaignObjective").value = campaignObjective + ' campaign';
 
         console.log(campaignObjective);
 
@@ -141,20 +141,20 @@ function comparaBaseline(){
     // let baselineEngRate = document.getElementById("baselineAvgEngRate").value;
 
 
-    let textoCTR = "";
+    let textCTR = "";
     let textoCPM = "";
     let textoCPC = "";
     let textoEngRate = "";
 
-    console.log(baselineCTR);
     //CTR
     if(compAvgCTR < baselineCTR){
-        textoCTR = "O CTR atualmente está abaixo dos benchmarks da plataforma, isso significa que é necessário revisar o nosso público e mensagem que estão transmitindo. Para isso recomendamos que:\n\nTeste: Experimente diferentes criativos para o público, assim você pode pausar o anúncio que estiver performando menos e, de quebra, ainda otimizar o seu orçamento.\nAnálise de concorrentes: Veja o que seus concorrentes têm feito e busque insights para melhorar a estratégia.\nRelevância para o público-alvo: sua mensagem é relevante para esse público, se sim, por qual motivo eles não estão clicando? Pode ser a mensagem que estamos transmitindo, lembre-se que um anúncio deve chamar a atenção e parecer importante para seu público."
-    } else if(compAvgCTR > baselineCTR){
-        textoCTR = "CTR está superando os benchmarks da plataforma! Esse desempenho reflete nosso trabalho estratégico e eficaz.\n\nPara manter essa trajetória de sucesso, é fundamental continuar monitorando e refinando as estratégias. Aproveitemos esse momento para buscar ainda mais melhorias:\n\n- Explorar novas abordagens criativas para impulsionar ainda mais o engajamento.\n- Analisar o que está funcionando para que possamos replicar e expandir essas práticas vitoriosas.\n- Estar atentos às mudanças no comportamento do nosso público-alvo para ajustar nossa mensagem de acordo."
+        textCTR = "The current CTR is below the platform benchmarks, which means it's necessary to review our audience and the message being conveyed. For this, we recommend:\n\nTesting: Try different creatives for the audience, so you can pause the ad that's performing less and, at the same time, optimize your budget.\nCompetitor analysis: See what your competitors have been doing and seek insights to improve the strategy.\nRelevance to the target audience: Is your message relevant to this audience? If yes, why aren't they clicking? It might be the message we're conveying; remember, an ad should grab attention and seem important to your audience."
+    } else if (compAvgCTR > baselineCTR) {
+        textCTR = "CTR is exceeding the platform benchmarks! This performance reflects our strategic and effective work.\n\nTo maintain this successful path, it's crucial to keep monitoring and refining the strategies. Let's seize this moment to seek even more improvements:\n\n- Explore new creative approaches to further boost engagement.\n- Analyze what's working so we can replicate and expand these successful practices.\n- Be attentive to changes in our target audience's behavior to adjust our message accordingly."
     } else {
-        textoCTR = "CTR está alinhado com os benchmarks da plataforma! Esse desempenho reflete nosso trabalho estratégico e eficaz.\n\nPara manter essa trajetória de sucesso, é fundamental continuar monitorando e refinando as estratégias. Aproveitemos esse momento para buscar ainda mais melhorias:\n\n- Explorar novas abordagens criativas para impulsionar ainda mais o engajamento.\n- Analisar o que está funcionando para que possamos replicar e expandir essas práticas vitoriosas.\n- Estar atentos às mudanças no comportamento do nosso público-alvo para ajustar nossa mensagem de acordo."
+        textCTR = "CTR is aligned with the platform benchmarks! This performance reflects our strategic and effective work.\n\nTo maintain this successful path, it's crucial to keep monitoring and refining the strategies. Let's seize this moment to seek even more improvements:\n\n- Explore new creative approaches to further boost engagement.\n- Analyze what's working so we can replicate and expand these successful practices.\n- Be attentive to changes in our target audience's behavior to adjust our message accordingly."
     }
+    
 
     //CPM
     // if(baselineCPM < compAvgCPM){
@@ -184,7 +184,7 @@ function comparaBaseline(){
     // }
 
     let optimizeTextAreaSheet = document.getElementById("optimized_text_sheet");
-    optimizeTextAreaSheet.value = textoCTR;
+    optimizeTextAreaSheet.value = textCTR;
 
 }
 

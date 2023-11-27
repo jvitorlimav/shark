@@ -12,14 +12,15 @@ function otimizar(){
     const objetivo = document.getElementById("escObjetivo").value;
     console.log(objetivo);
     console.log(audienceSugestion());
-    console.log(creativeSugestion());
+    //console.log(creativeSugestion());
 
     let textObjective = campaingObjective();
     let textAudience = audienceSugestion();
-    let textCreative = creativeSugestion();
+    //let textCreative = creativeSugestion();
     let textProducts = productsSugestion();
+    let textInfo = moreInfo();
     let finalText = textObjective;
-    finalText += "\n\nSeguem aqui algumas sugestões:" + textAudience + textCreative + textProducts;
+    finalText += "\n\nSeguem aqui algumas sugestões:" + textAudience + /*textCreative +*/ textProducts + textInfo;
     finalText += "\n\nAbraços,";
 
     return finalText;
@@ -97,66 +98,66 @@ function returnAudience(audience){
 }
 
 //Sobre criativos
-function creativeSugestion(){
-    const cta = document.getElementById("cta");
-    const hashUrl = document.getElementById("hash_url");
-    const aBtest = document.getElementById("abtest");
-    const captionText = document.getElementById("caption_Text");
-    const plusAd = document.getElementById("plus_Ad");
-    const adQuality = document.getElementById("ad_Quality");
-    const brand = document.getElementById("brand");
-    const coherence = document.getElementById("coherence");
-    const oldCreative = document.getElementById("old_creative");
+// function creativeSugestion(){
+//     const cta = document.getElementById("cta");
+//     const hashUrl = document.getElementById("hash_url");
+//     const aBtest = document.getElementById("abtest");
+//     const captionText = document.getElementById("caption_Text");
+//     const plusAd = document.getElementById("plus_Ad");
+//     const adQuality = document.getElementById("ad_Quality");
+//     const brand = document.getElementById("brand");
+//     const coherence = document.getElementById("coherence");
+//     const oldCreative = document.getElementById("old_creative");
        
-    const creatives = [cta, hashUrl, aBtest, captionText, plusAd, adQuality, brand, coherence, oldCreative].filter((sugCreative) => {
-        return sugCreative.checked;
-    });
+//     const creatives = [cta, hashUrl, aBtest, captionText, plusAd, adQuality, brand, coherence, oldCreative].filter((sugCreative) => {
+//         return sugCreative.checked;
+//     });
 
-    const selectedCreatives = creatives.map((sugCreative) => {
-        return sugCreative.value;
-    });
+//     const selectedCreatives = creatives.map((sugCreative) => {
+//         return sugCreative.value;
+//     });
 
-    let textCreative = "";
+//     let textCreative = "";
 
-    selectedCreatives.forEach(sugCreative => {
-        textCreative += returnSugCreative(sugCreative);
-    });
+//     selectedCreatives.forEach(sugCreative => {
+//         textCreative += returnSugCreative(sugCreative);
+//     });
 
-    return textCreative;
-}
+//     return textCreative;
+// }
 
-function returnSugCreative(sugCreative){
-    switch(sugCreative) {
-        case 'cta':
-        return '\n\n▶ Nas campanhas de conversão, é essencial ter um Call-to-Action (CTA) claro e direto no anúncio. O CTA é o que motiva os usuários a agir, como comprar, preencher um formulário ou entrar em contato. Certifique-se de tornar o CTA fácil de encontrar e compreender, para aumentar as chances de obter melhores resultados em suas campanhas.';
+// function returnSugCreative(sugCreative){
+//     switch(sugCreative) {
+//         case 'cta':
+//         return '\n\n▶ Nas campanhas de conversão, é essencial ter um Call-to-Action (CTA) claro e direto no anúncio. O CTA é o que motiva os usuários a agir, como comprar, preencher um formulário ou entrar em contato. Certifique-se de tornar o CTA fácil de encontrar e compreender, para aumentar as chances de obter melhores resultados em suas campanhas.';
   
-      case 'hashUrl':
-        return '\n\n▶ Adicionar hashtags aos criativos aumenta o engajamento e alcance. Use hashtags relevantes para ampliar a visibilidade do conteúdo. Inclua a URL de destino para direcionar a ação dos usuários. Isso impulsiona o engajamento, as impressões orgânicas e facilita a conversão.';
+//       case 'hashUrl':
+//         return '\n\n▶ Adicionar hashtags aos criativos aumenta o engajamento e alcance. Use hashtags relevantes para ampliar a visibilidade do conteúdo. Inclua a URL de destino para direcionar a ação dos usuários. Isso impulsiona o engajamento, as impressões orgânicas e facilita a conversão.';
   
-      case 'aBtest':
-        return '\n\n▶ Ao dividir seu público em grupos e expor cada grupo a variantes diferentes, como diferentes criativos, títulos ou segmentações, você pode avaliar qual abordagem gera melhores resultados. Isso permite que você tome decisões embasadas em dados reais e faça ajustes para melhorar o desempenho da sua campanha. O LinkedIn oferece recursos para configurar e acompanhar testes A/B, permitindo que você refine sua estratégia e alcance resultados mais efetivos.';
+//       case 'aBtest':
+//         return '\n\n▶ Ao dividir seu público em grupos e expor cada grupo a variantes diferentes, como diferentes criativos, títulos ou segmentações, você pode avaliar qual abordagem gera melhores resultados. Isso permite que você tome decisões embasadas em dados reais e faça ajustes para melhorar o desempenho da sua campanha. O LinkedIn oferece recursos para configurar e acompanhar testes A/B, permitindo que você refine sua estratégia e alcance resultados mais efetivos.';
       
-      case 'plusAd':
-        return '\n\n▶ Inclua mais criativos. Recomendamos de 3 a 5 criativos por campanha para otimizar os custos e rentabilizar o budget da campanha de acordo com os objetivos que foram selecionados. Se você não tiver peças suficientes, uma estratégia eficaz é duplicar as existentes e modificar os textos descritivos. Isso permite diversificar o conteúdo e atingir diferentes segmentos de público, aumentando a eficácia da campanha';
+//       case 'plusAd':
+//         return '\n\n▶ Inclua mais criativos. Recomendamos de 3 a 5 criativos por campanha para otimizar os custos e rentabilizar o budget da campanha de acordo com os objetivos que foram selecionados. Se você não tiver peças suficientes, uma estratégia eficaz é duplicar as existentes e modificar os textos descritivos. Isso permite diversificar o conteúdo e atingir diferentes segmentos de público, aumentando a eficácia da campanha';
 
-      case 'captionText':
-        return '\n\n▶ Deixe sua legenda mais clara e objetiva. É essencial que a sua legenda seja clara e objetiva para que os usuários entendam sem dificuldades qual a mensagem que está sendo passada. O mínimo ideal para criação de legenda é 150 caracteres. Algumas dicas de como estruturar uma boa legenda: Falar um diferencial, descrever o produto em pontos chaves, finalizar com uma pergunta para instigar o engajamento.';
+//       case 'captionText':
+//         return '\n\n▶ Deixe sua legenda mais clara e objetiva. É essencial que a sua legenda seja clara e objetiva para que os usuários entendam sem dificuldades qual a mensagem que está sendo passada. O mínimo ideal para criação de legenda é 150 caracteres. Algumas dicas de como estruturar uma boa legenda: Falar um diferencial, descrever o produto em pontos chaves, finalizar com uma pergunta para instigar o engajamento.';
       
-      case 'adQuality':
-        return '\n\n▶ Cheque a qualidade dos criativos, pois alguns não estão com a qualidade recomendada. Evite imagens desfocadas e com qualidade baixa, é importante que a imagem seja clara para que o cliente possa entender a mensagem que deve ser passada';
+//       case 'adQuality':
+//         return '\n\n▶ Cheque a qualidade dos criativos, pois alguns não estão com a qualidade recomendada. Evite imagens desfocadas e com qualidade baixa, é importante que a imagem seja clara para que o cliente possa entender a mensagem que deve ser passada';
 
-      case 'brand':
-        return '\n\n▶ Mantenha o seu criativo a identidade visual da sua empresa! O aspecto visual da empresa permite deixar uma impressão marcante no seu público, de modo que o negócio seja lembrado a partir de uma cor ou símbolo utilizado na elaboração da identidade. Cheque se as cores estão de acordo com a paleta da empresa e se a logo está presente.';
+//       case 'brand':
+//         return '\n\n▶ Mantenha o seu criativo a identidade visual da sua empresa! O aspecto visual da empresa permite deixar uma impressão marcante no seu público, de modo que o negócio seja lembrado a partir de uma cor ou símbolo utilizado na elaboração da identidade. Cheque se as cores estão de acordo com a paleta da empresa e se a logo está presente.';
 
-      case 'coherence':
-        return '\n\n▶ Certifique-se de que a narrativa adotada esteja alinhada com o seu público-alvo. A narrativa é responsável por 47% do sucesso da campanha no LinkedIn. Verifique se ela comunica claramente os diferenciais dos seus produtos/serviços e oferece soluções para as dores do seu mercado. Use provas sociais, como a recomendação de 90% dos clientes, para reforçar a confiabilidade. Transmita de forma sucinta por que eles recomendam sua empresa.'; 
+//       case 'coherence':
+//         return '\n\n▶ Certifique-se de que a narrativa adotada esteja alinhada com o seu público-alvo. A narrativa é responsável por 47% do sucesso da campanha no LinkedIn. Verifique se ela comunica claramente os diferenciais dos seus produtos/serviços e oferece soluções para as dores do seu mercado. Use provas sociais, como a recomendação de 90% dos clientes, para reforçar a confiabilidade. Transmita de forma sucinta por que eles recomendam sua empresa.'; 
       
-      case 'oldCreative':
-        return '\n\n▶ Substitua os seus criativos antigos. É importe entender a lógica da vitalidade dos criativos de uma campanha, pois quando um criativo se torna obsoleto a audiencia passa a ignorar com mais frquencia a publicação, o que faz com o que o CTR e outra métricas fiquem mais caras. Sempre acompanhe as métricas da sua campanha e faça relações dela com o tempo do critivo.'; 
+//       case 'oldCreative':
+//         return '\n\n▶ Substitua os seus criativos antigos. É importe entender a lógica da vitalidade dos criativos de uma campanha, pois quando um criativo se torna obsoleto a audiencia passa a ignorar com mais frquencia a publicação, o que faz com o que o CTR e outra métricas fiquem mais caras. Sempre acompanhe as métricas da sua campanha e faça relações dela com o tempo do critivo.'; 
       
-      default: return "";
-    }  
-}
+//       default: return "";
+//     }  
+// }
 
 //Sugestão de produto
 function productsSugestion(){
@@ -191,32 +192,84 @@ function returnProducts(product){
 
   switch(product) {
     case 'singImgAd':
-      return '\n\n▶ Além disso recomendamos que use o Single Image Ad, pois é exibido diretamente no feed do LinkedIn para alcançar os profissionais que você deseja atingir, tanto em computadores quanto em dispositivos móveis. Essa opção oferece uma forma eficaz de se conectar com seu público-alvo de maneira direta e impactante.';
+      return '\n\n▶ Single Image: Além disso recomendamos que use o Single Image Ad, pois é exibido diretamente no feed do LinkedIn para alcançar os profissionais que você deseja atingir, tanto em computadores quanto em dispositivos móveis. Essa opção oferece uma forma eficaz de se conectar com seu público-alvo de maneira direta e impactante.';
 
     case 'crssel':
-      return '\n\n▶ Também pode utilizar os anúncios em carrossel onde você pode exibir até 10 imagens com links independentes em um só anúncio e, com mais possibilidades em um mesmo anúncio, você pode destacar diferentes serviços, produtos e ofertas ou contar uma história sobre sua empresa ou marca à medida que os usuários veem cada imagem.';
+      return '\n\n▶ Carrossel: Utilize os anúncios em carrossel onde você pode exibir até 10 imagens com links independentes em um só anúncio e com mais possibilidades em um mesmo anúncio, você pode destacar diferentes serviços, produtos e ofertas ou contar uma história sobre sua empresa ou marca à medida que os usuários veem cada imagem.';
 
     case 'dynAd':
-      return '\n\n▶ Temos também o Dynamic ads, que é bem interessante, pois são anúncios personalizados sob medida para cada membro com base em seus perfil do LinkedIn próprios dados, como foto do perfil, nome da empresa ou cargo.';
+      return '\n\n▶ Dynamic Ads: Temos também o Dynamic ads, que é bem interessante, pois são anúncios personalizados sob medida para cada membro com base em seus perfil do LinkedIn próprios dados, como foto do perfil, nome da empresa ou cargo.';
 
     case 'docAd':
-      return '\n\n▶ O document Ads é outro recurso fantástico porque permite promover documentos diretamente no feed do LinkedIn, onde os usuários poderão ler e baixar facilmente o conteúdo sem precisar sair da plataforma; Inclusive é possível usá-lo junto com o formulário de geração de leads, onde você troca o lead pelo documento.';
+      return '\n\n▶ Document Ads: O document Ads é outro recurso fantástico porque permite promover documentos diretamente no feed do LinkedIn, onde os usuários poderão ler e baixar facilmente o conteúdo sem precisar sair da plataforma; Inclusive é possível usá-lo junto com o formulário de geração de leads, onde você troca o lead pelo documento.';
 
     case 'txtAd':
-      return '\n\n▶ O Text Ads é outro recurso fantástico pois são anúncios simples exibidos à direita ou na parte superior do feed do LinkedIn em computadores. Você pode dar lances CPC ou CPM para controlar seu investimento. Text Ads costuma ser um formato de anúncio mais barato, então use a abuse de textos curtos e objetivos para atingir o seu público alvo.';
+      return '\n\n▶Text Ads: Anúncios simples exibidos à direita ou na parte superior do feed do LinkedIn em computadores. Você pode dar lances CPC ou CPM para controlar seu investimento. Text Ads costuma ser um formato de anúncio mais barato, então use a abuse de textos curtos e objetivos para atingir o seu público alvo.​';
 
     case 'cvAd':
-      return '\n\n▶ O Conversation Ads é um recurso fantástico que te permite enviar mensagens privadas oportunas, convenientes e relevantes ás pessoas mais importantes para o seu negócio.Possui um design otimizado para dispositivos móveis e a sua entrega real garante o contato oportuno somente quando o usuário estiver online. Aproveita a flexibilidade para personalizar o conteúdo e aborde o seu público em um contexto profissional ';
+      return '\n\n▶ Conversation Ads: O Conversation Ads é um formato que te permite enviar mensagens privadas oportunas, convenientes e relevantes ás pessoas mais importantes para o seu negócio.Possui um design otimizado para dispositivos móveis e a sua entrega real garante o contato oportuno somente quando o usuário estiver online. Aproveita a flexibilidade para personalizar o conteúdo e aborde o seu público em um contexto profissional ';
     
     case 'vidAd':
-      return '\n\n▶ O Video Ads é outro recurso fantástico, com ele é possível alcançar um público profissional com vídeos nativos em cada etapa do proceddo de decisão de campra';
+      return '\n\n▶ Video Ads: Com ele é possível alcançar um público profissional com vídeos nativos em cada etapa do proceddo de decisão de campra';
 
     case 'evAd':
-      return '\n\n▶ O Event Ads é outro recurso fantástico, que permite que você promova eventos para um público definido. Os anúncios de eventos são exibidos no feed do LinkedIn, tanto em computadores quanto em dispositivéis móveis e otimizados para destacar detalhes importantes do evento. ';
+      return '\n\n▶Event Ads: Permite que você promova eventos para um público definido. Os anúncios de eventos são exibidos no feed do LinkedIn, tanto em computadores quanto em dispositivéis móveis e otimizados para destacar detalhes importantes do evento. ';
 
     case 'tlad':
-      return '\n\n▶ O Thought Leader Ads é outro recurso fantástico, porque você pode usar-lo para promover conteúdo de executivos e funcionários de sua empresa, o que pode aumentar seu alcance e ajudá-lo a atingir as metas de sua marca. Os anúncios de líderes de pensamento podem ajudar seu conteúdo a permanecer envolvente e relevante usando experiências autênticas de funcionários.';
+      return '\n\n▶ Thought Leader Ads: Com este formato você pode usar-lo para promover conteúdo de executivos e funcionários de sua empresa, o que pode aumentar seu alcance e ajudá-lo a atingir as metas de sua marca. Os anúncios de líderes de pensamento podem ajudar seu conteúdo a permanecer envolvente e relevante usando experiências autênticas de funcionários.';
  
+    default: return "";
+  }  
+}
+
+//Mais informações
+function moreInfo(){
+  const alwaysOn = document.getElementById("always_on");
+  const insightTag = document.getElementById("insight_tag");
+  const funilCompleto = document.getElementById("funil_completo");
+  const tempoAprendizagem = document.getElementById("tempo_aprendizagem");
+  const leadsCRM = document.getElementById("crm_leads");
+  const offConversao = document.getElementById("off_conversao");
+
+
+  const moreInf = [alwaysOn, insightTag, funilCompleto, tempoAprendizagem, leadsCRM, offConversao].filter((moreInf) => {
+      return moreInf.checked;
+  });
+
+  const selectedInfo = moreInf.map((moreInf) => {
+      return moreInf.value;
+  });
+
+  let textInfo = "";
+
+  selectedInfo.forEach(moreInf => {
+      textInfo += returnInfo(moreInf);
+  });
+
+  return textInfo;
+}
+
+function returnInfo(moreInf){
+
+  switch(moreInf) {
+    case 'alwOn':
+      return '\n\n▶ Seria importante que implementassem uma narrativa always on permite que a marca transmita uma mensagem consistente ao longo do tempo. Isso cria uma identidade sólida e ajuda os consumidores a reconhecerem e se conectarem com a marca de forma mais efetiva.';
+
+    case 'inTag':
+      return '\n\n▶ Recomendamos que implementem o LinkedIn Insight Tag é um código JavaScript que pode ser adicionado ao seu site para permitir relatórios detalhados das campanhas e obtenção de insights úteis sobre os visitantes do seu site. Você pode usar a LinkedIn Insight Tag para rastrear as conversões, redirecionar visitantes do site e obter insights adicionais sobre usuários que interagem com seus anúncios.';
+
+    case 'fullFunnel':
+      return '\n\n▶ Faça campanhas de funil completo, trabalhando melhor a presença de marca. Estudos do B2B Institute afirmam que apenas 5% da audiência impactada está de fato no momento para realizar uma compra, sendo assim, deixar a sua marca sempre visível e em todos os momentos da jornada de compra vai ampliar este alcance e geração de negócios.';
+
+    case 'tempApre':
+      return '\n\n▶ Cada campanha lançada passa por um período de aprendizagem de mais ou menos 10 dias corridos para a plataforma entender o seu público e configurações gerais da sua campanha. Recomendamos que durante esse período não faça nenhum tipo de alteração, e somente após isso observe suas métricas chaves e baseado nelas faça alterações se necessário. ';
+
+    case 'crmLeads':
+      return '\n\n▶Se você usar uma automação de marketing ou plataforma de CRM específica para gerenciar seus leads, poderá integrar seus formulários de geração de leads com sua automação de marketing ou provedor de CRM. Essa integração permite que você aproveite automaticamente as plataformas que já configurou. Clique aqui para entender mais sobre o assunto.';
+
+    case 'offConv':
+      return '\n\n▶ Conversões off-line é um método de rastreamento de conversão que permite atribuir seus dados off-line (como chamadas telefônicas e transações pessoais) aos seus anúncios do LinkedIn. Isso pode ajudá-lo a medir com mais precisão a eficácia do funil de suas campanhas, fornecendo mais informações para melhorar a medição do retorno sobre o investimento e otimizar o desempenho. Clique aqui para entender mais sobre o assunto. ';
+
     default: return "";
   }  
 }

@@ -57,30 +57,31 @@ function showDivPublico(select){
     }
  } 
 
- function showDivCreative(select){
-    const cta = document.getElementById('cta');
-    const hashUrl = document.getElementById('hash_url');
-    const abtest = document.getElementById('abtest');
+//  function showDivCreative(select){
+//     const cta = document.getElementById('cta');
+//     const hashUrl = document.getElementById('hash_url');
+//     const abtest = document.getElementById('abtest');
 
-    if(select.checked){
-        document.getElementById("hidden_div_creative").style.display = "block";
-    } else{
-        document.getElementById("hidden_div_creative").style.display = "none";
-        cta.checked = false;
-        hashUrl.checked = false;
-        abtest.checked = false;
-    }
- } 
+//     if(select.checked){
+//         document.getElementById("hidden_div_creative").style.display = "block";
+//     } else{
+//         document.getElementById("hidden_div_creative").style.display = "none";
+//         cta.checked = false;
+//         hashUrl.checked = false;
+//         abtest.checked = false;
+//     }
+//  } 
 
  function showDivProduct(select){
-    const single_image = document.getElementById('single_image');
-    const carroussel = document.getElementById('carroussel');
-    const dynAds = document.getElementById('dyn_ads');
-    const docAds = document.getElementById('doc_ads');
-    const textAds = document.getElementById('text_ads');    
-    const convAds = document.getElementById('conv_ads');
-    const vidAds = document.getElementById('vid_ads');
-    const eventAds = document.getElementById('event_ads');
+    const singImage = document.getElementById("single_image");
+    const carroussel = document.getElementById("carroussel");
+    const dynAd = document.getElementById("dyn_ads");
+    const docAd = document.getElementById("doc_ads");
+    const txtAd = document.getElementById("text_ads");
+    const convAd = document.getElementById("conv_ads");
+    const vidAd = document.getElementById("vid_ads");
+    const eventAd = document.getElementById("event_ads");
+    const leaderAd = document.getElementById("leader_ads");
 
     if(select.checked){
         document.getElementById("hidden_div_product").style.display = "block";
@@ -88,29 +89,34 @@ function showDivPublico(select){
         document.getElementById("hidden_div_product").style.display = "none";
         single_image.checked = false;
         carroussel.checked = false;
-        dynAds.checked = false;
-        docAds.checked = false;
-        textAds.checked = false;
-        convAds.checked = false;
-        vidAds.checked = false;
-        eventAds.checked = false;
+        dyn_ads.checked = false;
+        doc_ads.checked = false;
+        text_ads.checked = false;
+        conv_ads.checked = false;
+        vid_ads.checked = false;
+        event_ads.checked = false;
+        leaderAd = false;
     }
  } 
 
- function showDivNarrative(select){
-    const coherence = document.getElementById('coherence');
-    const fullFunnel = document.getElementById('full_funnel');
-    const inTag = document.getElementById('in_tag');
-    const alwaysOn = document.getElementById('always_on');
+ function showDivMore(select){
+    const alwaysOn = document.getElementById("always_on");
+    const insightTag = document.getElementById("insight_tag");
+    const funilCompleto = document.getElementById("funil_completo");
+    const tempoAprendizagem = document.getElementById("tempo_aprendizagem");
+    const leadsCRM = document.getElementById("crm_leads");
+    const offConversao = document.getElementById("off_conversao");
 
     if(select.checked){
-        document.getElementById("hidden_div_narrative").style.display = "block";
+        document.getElementById("hidden_div_more").style.display = "block";
     } else{
-        document.getElementById("hidden_div_narrative").style.display = "none";
-        coherence.checked = false;
-        fullFunnel.checked = false;
-        inTag.checked = false;
+        document.getElementById("hidden_div_more").style.display = "none";
         alwaysOn.checked = false;
+        insightTag.checked = false;
+        funilCompleto.checked = false;
+        tempoAprendizagem.checked = false;
+        leadsCRM.checked = false;
+        offConversao.checked = false;
     }
  } 
 
