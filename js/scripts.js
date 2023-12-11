@@ -57,20 +57,19 @@ function showDivPublico(select){
     }
  } 
 
-//  function showDivCreative(select){
-//     const cta = document.getElementById('cta');
-//     const hashUrl = document.getElementById('hash_url');
-//     const abtest = document.getElementById('abtest');
-
-//     if(select.checked){
-//         document.getElementById("hidden_div_creative").style.display = "block";
-//     } else{
-//         document.getElementById("hidden_div_creative").style.display = "none";
-//         cta.checked = false;
-//         hashUrl.checked = false;
-//         abtest.checked = false;
-//     }
-//  } 
+  function showDivCreative(select){
+     const cta = document.getElementById('cta');
+     const hashUrl = document.getElementById('hash_url');
+     const abtest = document.getElementById('abtest')
+     if(select.checked){
+         document.getElementById("hidden_div_creative").style.display = "block";
+     } else{
+         document.getElementById("hidden_div_creative").style.display = "none";
+         cta.checked = false;
+         hashUrl.checked = false;
+         abtest.checked = false;
+     }
+  } 
 
  function showDivProduct(select){
     const singImage = document.getElementById("single_image");

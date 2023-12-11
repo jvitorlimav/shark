@@ -16,11 +16,11 @@ function otimizar(){
 
     let textObjective = campaingObjective();
     let textAudience = audienceSugestion();
-    //let textCreative = creativeSugestion();
+    let textCreative = creativeSugestion();
     let textProducts = productsSugestion();
     let textInfo = moreInfo();
     let finalText = textObjective;
-    finalText += "\n\nSeguem aqui algumas sugestões:" + textAudience + /*textCreative +*/ textProducts + textInfo;
+    finalText += "\n\nSeguem aqui algumas sugestões:" + textAudience + textCreative + textProducts + textInfo;
     finalText += "\n\nAbraços,";
 
     return finalText;
@@ -60,9 +60,22 @@ function audienceSugestion(){
     const audienceSize = document.getElementById("audience_size");
     const indSize = document.getElementById("ind_size");
     const influencers = document.getElementById("influencers");
+
+    const refIncAud = document.getElementById("ref_IncAud");
+    const refDecAud = document.getElementById("ref_DecAud");
+    const customSeg = document.getElementById("custom_Seg");
+    const eOr = document.getElementById("e_Or");
+    const decAudExp = document.getElementById("dec_AudExp");
+    const actAudExp = document.getElementById("act_AudExp");
+    const lan = document.getElementById("l_AudNet");
+    const matchRet = document.getElementById("match_Ret");
+    const matchContTarg = document.getElementById("match_ContTarg");
+    const matchAccTarg = document.getElementById("match_AccTarg");
+    const matchLook = document.getElementById("match_Look");
     
-    const audiences = [compExp, audienceSize, indSize, influencers].filter((audience) => {
-        return audience.checked;
+    const audiences = [compExp, audienceSize, indSize, influencers, refIncAud, refDecAud, customSeg, eOr, decAudExp, actAudExp, lan, matchRet, matchLook, matchContTarg, matchAccTarg].filter((audience) => {
+      console.log(audience); 
+      return audience.checked;
     });
 
     const selectedAudiences = audiences.map((audience) => {
@@ -93,71 +106,100 @@ function returnAudience(audience){
       case 'audSiz':
         return '\n\n▶ Aumentar tamanho da audiência: No LinkedIn, é aconselhável ter públicos com mais de 50 mil usuários para otimizar o desempenho das campanhas. Para aumentar o tamanho do público, você pode ampliar os critérios de segmentação, incluindo mais setores de negócios relevantes ou ajustando os requisitos de experiência. Isso permitirá alcançar um número maior de usuários e obter resultados mais eficazes nas campanhas.';
    
+      case 'incAud':
+        return '\n\n▶ De acordo com o seu objetivo de campanha não é recomendado utilizar uma audiência tão fechada, pois para esta etapa do funil estamos buscando por um maior alcance de público. Dessa forma, você pode expandir mais a sua audiência utilizando o recurso de "OU" para deixar o público mais aberto. ';
+
+      case 'decAud':
+        return '\n\n▶ De acordo com o seu objetivo de campanha não é recomendado utilizar uma audiência tão ampla, pois para esta etapa do funil estamos buscando um público mais nichado e que já conheça a marca. Dessa forma, você pode afunilar mais a sua audiência utilizando o recurso de "E" para deixar o público mais nichado. ';
+        
+      case 'customSeg':
+        return '\n\n▶ Vejo que na sua campanha há a oportunidade de utilizar a ferramenta de "Segmento Customizado" , porque estamos falando de um público nichado e especifico. Sugiro que utilize o segmento customizado "XXXX"  para deixar sua audiência mais assertiva. Este é um recurso que apenas nós, do LinkedIn, conseguimos adicionar, então caso opte por essa sgestão nos avise para que eu possa incluir. ';
+
+      case 'eOr':
+        return '\n\n▶ É importante entender a diferença entre um público mais nichado e um mais aberto. Quando utilizamos o recurso "E" em uma segmentação estamos falando sobre características indispensáveis da sua audiência, e quando falamos sobre "OU" estamos dando um complemento ao que é indispensável. Preste atenção nas suas combinações e fique de olho também no tamanho da sua audiência, pois utilizar esses recursos pode deixa-la mais aberta ou fechada. ';
+  
+      case 'decAudExp':
+        return '\n\n▶ No caso da sua campanha, não é aconselhado a utilizar o Audience Expansion. Veja mais neste link em quais situações do Audience Expansion se encaixa: https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion?lang=en-us&intendedLocale=uk';
+        
+      case 'actAudExp':
+        return '\n\n▶ Você pode usar a Expansão de Público para aumentar o alcance de sua campanha exibindo seus anúncios para públicos com atributos semelhantes ao seu público-alvo. ';
+
+      case 'lAudNet':
+        return '\n\n▶ Ative a LinkedIn Audience Network. O LAN permite estender o alcance das suas campanhas de Sponsored Content, exibindo seus anúncios fora do feed do LinkedIn para usuários em aplicativos e sites confiáveis de terceiros. Quando você habilita a LinkedIn Audience Network na configuração da campanha, os mesmos parâmetros de segmentação,lance e orçamento são aplicados em outros canais. ';
+
+      case 'matchRet':
+        return '\n\n▶ Utilize o Matched Audiences RETARGETING. O Matched Audiences é um conjunto de opções de segmentação para aproveitar seus dados comerciais e os dados profissionais do LinkedIn. Isso resulta em uma estratégia de marketing mais rica que se baseia no que você já está fazendo. Com Matched Audiences Retargeting, você consegue alcançar visitantes da sua página de vendas e visitantes da sua product page com um estudo de caso de um cliente que teve bons resultados com o seu produto';
+  
+      case 'matchContTarg':
+        return '\n\n▶ Utilize o Matched Audiences CONTACT TARGETING. O Matched Audiences é um conjunto de opções de segmentação para aproveitar seus dados comerciais e os dados profissionais do LinkedIn. Isso resulta em uma estratégia de marketing mais rica que se baseia no que você já está fazendo. Com Matched Audiences Retargeting, você consegue alcançar visitantes da sua página de vendas e visitantes da sua product page com um estudo de caso de um cliente que teve bons resultados com o seu produto';
+        
+      case 'matchAccTag':
+        return '\n\n▶ Utilize o Matched Audiences RETARGETING. O Matched Audiences é um conjunto de opções de segmentação para aproveitar seus dados comerciais e os dados profissionais do LinkedIn. Isso resulta em uma estratégia de marketing mais rica que se baseia no que você já está fazendo. Com Matched Audiences inclui Retargeting, você consegue alcançar visitantes da sua página de vendas e visitantes da sua product page com um estudo de caso de um cliente que teve bons resultados com o seu produto';
+  
+      case 'matchLook':
+        return '\n\n▶ Utilize o Matched Audiences RETARGETING. O Matched Audiences é um conjunto de opções de segmentação para aproveitar seus dados comerciais e os dados profissionais do LinkedIn. Isso resulta em uma estratégia de marketing mais rica que se baseia no que você já está fazendo. Com Matched Audiences inclui Retargeting, você consegue alcançar visitantes da sua página de vendas e visitantes da sua product page com um estudo de caso de um cliente que teve bons resultados com o seu produto';
+
       default: return "";
     }  
 }
 
 //Sobre criativos
-// function creativeSugestion(){
-//     const cta = document.getElementById("cta");
-//     const hashUrl = document.getElementById("hash_url");
-//     const aBtest = document.getElementById("abtest");
-//     const captionText = document.getElementById("caption_Text");
-//     const plusAd = document.getElementById("plus_Ad");
-//     const adQuality = document.getElementById("ad_Quality");
-//     const brand = document.getElementById("brand");
-//     const coherence = document.getElementById("coherence");
-//     const oldCreative = document.getElementById("old_creative");
+function creativeSugestion(){
+     const cta = document.getElementById("cta");
+     const hashUrl = document.getElementById("hash_url");
+     const aBtest = document.getElementById("abtest");
+     const captionText = document.getElementById("caption_Text");
+     const plusAd = document.getElementById("plus_Ad");
+     const adQuality = document.getElementById("ad_Quality");
+     const brand = document.getElementById("brand");
+     const coherence = document.getElementById("coherence");
+     const oldCreative = document.getElementById("old_creative");
+     
+     const creatives = [cta, hashUrl, aBtest, captionText, plusAd, adQuality, brand, coherence, oldCreative].filter((sugCreative) => {
+        console.log(sugCreative);
+         return sugCreative.checked;
+     });
+     const selectedCreatives = creatives.map((sugCreative) => {
+         return sugCreative.value;
+     });
+     let textCreative = "";
+     selectedCreatives.forEach(sugCreative => {
+         textCreative += returnSugCreative(sugCreative);
+     });
+     return textCreative;
+ }
+ function returnSugCreative(sugCreative){
+     switch(sugCreative) {
+         case 'cta':
+         return '\n\n▶ Nas campanhas de conversão, é essencial ter um Call-to-Action (CTA) claro e direto no anúncio. O CTA é o que motiva os usuários a agir, como comprar, preencher um formulário ou entrar em contato. Certifique-se de tornar o CTA fácil de encontrar e compreender, para aumentar as chances de obter melhores resultados em suas campanhas.';
+
+       case 'hashUrl':
+         return '\n\n▶ Adicionar hashtags aos criativos aumenta o engajamento e alcance. Use hashtags relevantes para ampliar a visibilidade do conteúdo. Inclua a URL de destino para direcionar a ação dos usuários. Isso impulsiona o engajamento, as impressões orgânicas e facilita a conversão.';
+
+       case 'aBtest':
+         return '\n\n▶ Ao dividir seu público em grupos e expor cada grupo a variantes diferentes, como diferentes criativos, títulos ou segmentações, você pode avaliar qual abordagem gera melhores resultados. Isso permite que você tome decisões embasadas em dados reais e faça ajustes para melhorar o desempenho da sua campanha. O LinkedIn oferece recursos para configurar e acompanhar testes A/B, permitindo que você refine sua estratégia e alcance resultados mais efetivos.';
+    
+       case 'plusAd':
+         return '\n\n▶ Inclua mais criativos. Recomendamos de 3 a 5 criativos por campanha para otimizar os custos e rentabilizar o budget da campanha de acordo com os objetivos que foram selecionados. Se você não tiver peças suficientes, uma estratégia eficaz é duplicar as existentes e modificar os textos descritivos. Isso permite diversificar o conteúdo e atingir diferentes segmentos de público, aumentando a eficácia da campanha';
        
-//     const creatives = [cta, hashUrl, aBtest, captionText, plusAd, adQuality, brand, coherence, oldCreative].filter((sugCreative) => {
-//         return sugCreative.checked;
-//     });
-
-//     const selectedCreatives = creatives.map((sugCreative) => {
-//         return sugCreative.value;
-//     });
-
-//     let textCreative = "";
-
-//     selectedCreatives.forEach(sugCreative => {
-//         textCreative += returnSugCreative(sugCreative);
-//     });
-
-//     return textCreative;
-// }
-
-// function returnSugCreative(sugCreative){
-//     switch(sugCreative) {
-//         case 'cta':
-//         return '\n\n▶ Nas campanhas de conversão, é essencial ter um Call-to-Action (CTA) claro e direto no anúncio. O CTA é o que motiva os usuários a agir, como comprar, preencher um formulário ou entrar em contato. Certifique-se de tornar o CTA fácil de encontrar e compreender, para aumentar as chances de obter melhores resultados em suas campanhas.';
-  
-//       case 'hashUrl':
-//         return '\n\n▶ Adicionar hashtags aos criativos aumenta o engajamento e alcance. Use hashtags relevantes para ampliar a visibilidade do conteúdo. Inclua a URL de destino para direcionar a ação dos usuários. Isso impulsiona o engajamento, as impressões orgânicas e facilita a conversão.';
-  
-//       case 'aBtest':
-//         return '\n\n▶ Ao dividir seu público em grupos e expor cada grupo a variantes diferentes, como diferentes criativos, títulos ou segmentações, você pode avaliar qual abordagem gera melhores resultados. Isso permite que você tome decisões embasadas em dados reais e faça ajustes para melhorar o desempenho da sua campanha. O LinkedIn oferece recursos para configurar e acompanhar testes A/B, permitindo que você refine sua estratégia e alcance resultados mais efetivos.';
+       case 'captionText':
+         return '\n\n▶ Deixe sua legenda mais clara e objetiva. É essencial que a sua legenda seja clara e objetiva para que os usuários entendam sem dificuldades qual a mensagem que está sendo passada. O mínimo ideal para criação de legenda é 150 caracteres. Algumas dicas de como estruturar uma boa legenda: Falar um diferencial, descrever o produto em pontos chaves, finalizar com uma pergunta para instigar o engajamento.';
+    
+       case 'adQuality':
+         return '\n\n▶ Cheque a qualidade dos criativos, pois alguns não estão com a qualidade recomendada. Evite imagens desfocadas e com qualidade baixa, é importante que a imagem seja clara para que o cliente possa entender a mensagem que deve ser passada';
       
-//       case 'plusAd':
-//         return '\n\n▶ Inclua mais criativos. Recomendamos de 3 a 5 criativos por campanha para otimizar os custos e rentabilizar o budget da campanha de acordo com os objetivos que foram selecionados. Se você não tiver peças suficientes, uma estratégia eficaz é duplicar as existentes e modificar os textos descritivos. Isso permite diversificar o conteúdo e atingir diferentes segmentos de público, aumentando a eficácia da campanha';
-
-//       case 'captionText':
-//         return '\n\n▶ Deixe sua legenda mais clara e objetiva. É essencial que a sua legenda seja clara e objetiva para que os usuários entendam sem dificuldades qual a mensagem que está sendo passada. O mínimo ideal para criação de legenda é 150 caracteres. Algumas dicas de como estruturar uma boa legenda: Falar um diferencial, descrever o produto em pontos chaves, finalizar com uma pergunta para instigar o engajamento.';
+       case 'brand':
+         return '\n\n▶ Mantenha o seu criativo a identidade visual da sua empresa! O aspecto visual da empresa permite deixar uma impressão marcante no seu público, de modo que o negócio seja lembrado a partir de uma cor ou símbolo utilizado na elaboração da identidade. Cheque se as cores estão de acordo com a paleta da empresa e se a logo está presente.';
       
-//       case 'adQuality':
-//         return '\n\n▶ Cheque a qualidade dos criativos, pois alguns não estão com a qualidade recomendada. Evite imagens desfocadas e com qualidade baixa, é importante que a imagem seja clara para que o cliente possa entender a mensagem que deve ser passada';
-
-//       case 'brand':
-//         return '\n\n▶ Mantenha o seu criativo a identidade visual da sua empresa! O aspecto visual da empresa permite deixar uma impressão marcante no seu público, de modo que o negócio seja lembrado a partir de uma cor ou símbolo utilizado na elaboração da identidade. Cheque se as cores estão de acordo com a paleta da empresa e se a logo está presente.';
-
-//       case 'coherence':
-//         return '\n\n▶ Certifique-se de que a narrativa adotada esteja alinhada com o seu público-alvo. A narrativa é responsável por 47% do sucesso da campanha no LinkedIn. Verifique se ela comunica claramente os diferenciais dos seus produtos/serviços e oferece soluções para as dores do seu mercado. Use provas sociais, como a recomendação de 90% dos clientes, para reforçar a confiabilidade. Transmita de forma sucinta por que eles recomendam sua empresa.'; 
-      
-//       case 'oldCreative':
-//         return '\n\n▶ Substitua os seus criativos antigos. É importe entender a lógica da vitalidade dos criativos de uma campanha, pois quando um criativo se torna obsoleto a audiencia passa a ignorar com mais frquencia a publicação, o que faz com o que o CTR e outra métricas fiquem mais caras. Sempre acompanhe as métricas da sua campanha e faça relações dela com o tempo do critivo.'; 
-      
-//       default: return "";
-//     }  
-// }
+       case 'coherence':
+         return '\n\n▶ Certifique-se de que a narrativa adotada esteja alinhada com o seu público-alvo. A narrativa é responsável por 47% do sucesso da campanha no LinkedIn. Verifique se ela comunica claramente os diferenciais dos seus produtos/serviços e oferece soluções para as dores do seu mercado. Use provas sociais, como a recomendação de 90% dos clientes, para reforçar a confiabilidade. Transmita de forma sucinta por que eles recomendam sua empresa.'; 
+    
+       case 'oldCreative':
+         return '\n\n▶ Substitua os seus criativos antigos. É importe entender a lógica da vitalidade dos criativos de uma campanha, pois quando um criativo se torna obsoleto a audiencia passa a ignorar com mais frquencia a publicação, o que faz com o que o CTR e outra métricas fiquem mais caras. Sempre acompanhe as métricas da sua campanha e faça relações dela com o tempo do critivo.'; 
+    
+       default: return "";
+     }  
+ }
 
 //Sugestão de produto
 function productsSugestion(){
