@@ -74,7 +74,7 @@
                                 <p class="card-text">Upload a spreadsheet, and Shark will customize a campaign
                                     optimization text.</p>
                                 <button type="button" class="btn btn-primary w-100 rounded" data-bs-toggle="modal"
-                                    data-bs-target="#modalplan">Get Started</button>
+                                    data-bs-target="#modalplan" disabled>Coming Soon</button>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                                 <div class="card col-sm-12">
                                     <div class="card-body">
                                         <div class="hstack">
-                                            <h5 class="card-title me-auto">Audience suggestion?</h5>
+                                            <h5 class="card-title me-auto">Target Audience Suggestions?</h5>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch"
                                                     id="flexSwitchCheckDefault" onclick="showDivPublico(this)">
@@ -151,44 +151,116 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="cUser"
                                                         id="comp_exp">
-                                                    <label class="form-check-label" for="flexCheckDefault">User Skills +
-                                                        Experience Level</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Member Skills + Years of Experience </label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="audSiz"
                                                         id="audience_size">
-                                                    <label class="form-check-label" for="flexCheckDefault">Increase
-                                                        Audience Size</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Increase Audience Size </label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="indSiz"
                                                         id="ind_size">
-                                                    <label class="form-check-label" for="flexCheckDefault">Company Size
-                                                        + Industry</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Company Size + Industry </label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="influ"
                                                         id="influencers">
-                                                    <label class="form-check-label" for="flexCheckDefault">Decision
-                                                        Makers & Influencers</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Decision makers
+                                                        & influencers </label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="ref_IncAud"
+                                                        id="ref_IncAud">
+                                                    <label class="form-check-label" for="flexCheckDefault">Refinement of Audience (Decrease audience) </label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="ref_DecAud"
+                                                        id="ref_DecAud">
+                                                    <label class="form-check-label" for="flexCheckDefault">Refinement of Audience (Increase audience) </label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="customSeg"
+                                                        id="custom_Seg">
+                                                    <label class="form-check-label" for="flexCheckDefault">Custom Segment </label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="eOr"
+                                                        id="e_Or">
+                                                    <label class="form-check-label" for="flexCheckDefault">Difference between 'AND' and 'OR'"</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="decAudExp"
+                                                        id="dec_AudExp">
+                                                    <label class="form-check-label" for="flexCheckDefault">Deactivate Audience Expansion</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="actAudExp"
+                                                        id="act_AudExp">
+                                                    <label class="form-check-label" for="flexCheckDefault">Activate Audience Expansion</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="lAudNet"
+                                                        id="l_AudNet">
+                                                    <label class="form-check-label" for="flexCheckDefault">LAN</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="matchRet"
+                                                        id="match_Ret">
+                                                    <label class="form-check-label" for="flexCheckDefault">Matched Audience - Retargeting</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="matchContTarg"
+                                                        id="match_ContTarg">
+                                                    <label class="form-check-label" for="flexCheckDefault">Matched Audience - Contact Targeting</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="matchAccTarg"
+                                                        id="match_AccTarg">
+                                                    <label class="form-check-label" for="flexCheckDefault">Matched Audience - Account Targeting</label>
+                                                    <i class="bi bi-info-circle-fill" data-toggle="tooltip"
+                                                        title="Tooltip on right"></i>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="matchLook"
+                                                        id="match_Look">
+                                                    <label class="form-check-label" for="flexCheckDefault">Matched Audience - Lookalike</label>
                                                     <i class="bi bi-info-circle-fill" data-toggle="tooltip"
                                                         title="Tooltip on right"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                     </div>
                                 </div>
-
                                 <br>
                                 <!-- Criativos -->
-                                <!-- <div class="card col-md-12">
+                                <div class="card col-md-12">
                                     <div class="card-body">
                                         <div class="hstack">
                                             <h5 class="card-title me-auto">Sugestões sobre criativos?</h5>
@@ -209,57 +281,52 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="hashUrl"
                                                         id="hash_url">
-                                                    <label class="form-check-label" for="flexCheckDefault">Hastags e
+                                                    <label class="form-check-label" for="flexCheckDefault">Hastags and
                                                         URL</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="aBtest"
                                                         id="abtest">
-                                                    <label class="form-check-label" for="flexCheckDefault">Teste
-                                                        A/B</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">A/B Test</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="plusAd"
                                                         id="plus_Ad">
-                                                    <label class="form-check-label" for="flexCheckDefault">Inclua mais
-                                                        criativos</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Add more creatives</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="captionText"
                                                         id="caption_Text">
                                                     <label class="form-check-label"
-                                                        for="flexCheckDefault">Legenda</label>
+                                                        for="flexCheckDefault">Caption</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="adQuality"
                                                         id="ad_Quality">
-                                                    <label class="form-check-label" for="flexCheckDefault">Qualidade do
-                                                        Criativo</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Creative Quality</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="brand"
                                                         id="brand">
-                                                    <label class="form-check-label" for="flexCheckDefault">Identidade
-                                                        Visual/Logo</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Visual Identity/Logo</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="coherence"
                                                         id="coherence">
                                                     <label class="form-check-label"
-                                                        for="flexCheckDefault">Coerência</label>
+                                                        for="flexCheckDefault">Consistency</label>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="oldCreative"
                                                         id="old_creative">
-                                                    <label class="form-check-label" for="flexCheckDefault">Renove
-                                                        criativos</label>
+                                                    <label class="form-check-label" for="flexCheckDefault">Renew/Refresh creatives</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
                                     </div>
                                 </div>
-                                <br> -->
+                                <br>
                                 <!-- Produtos -->
                                 <div class="card col-md-12">
                                     <div class="card-body">
@@ -531,6 +598,7 @@
     </div>
     </div>
 
+    <a href="https://forms.gle/i2Kd49xQa9ETLeUQA"><button type="button" class="btn btn-lg verticalButton">Feedback!</button></a>
 
     <!-- <button id="chat-button">🗨️</button>
             <div id="chat-popup">
